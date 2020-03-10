@@ -18,6 +18,10 @@ _Spheres and planes_: why is spatial special?
 - The importance of where - illustrate with sorted table vs map of countries
 - "As location is often the common factor across multiple datasets, spatial data is an especially useful addition to the Web of data." [w3c](https://www.w3.org/TR/sdw-bp/)
 - Spatial relationships
+- Where does spatial data come from? 
+    - Remote sensing
+    - Surveyors
+    - ??
 
 _Servers and clients_: why is web special?
 - Mobile browsers deliver the web to users wherever they go
@@ -48,7 +52,7 @@ Coordinate Reference Systems
 
 Raster
 - Tiles
-- Formats: tif, png, jpg
+- Formats: tif, png, jpg, cogs (cloud-optimized geotiff)
 - Placing tiles
 - Fetching tiles as we zoom
 - ZXY ("Zoom X Y"!), WMTS 
@@ -69,7 +73,7 @@ Vector
     - Talk about Multi* / FeatureCollections (image) (types)
     - Complex polygons
 - "Layer": collection of similar features  (?? multi-type layers?)
-- Formats: geojson, shp, kml, gml, geopackage, vector tiles (code examples - at least of geojson)
+- Formats: geojson, shp, kml, gml, geopackage, vector tiles, WKT, sf (code examples - at least of geojson)
     - An aside: topojson.
 - Labels.
 - geometries and attributes
@@ -86,8 +90,7 @@ Data sources
 - ArcGIS MapServer
 - ??
 
-Styling
-- 
+Styling 
 
 Mapping terms
 - Map state: refers to the state of hte map visualization including zoom level, center or bounding box, pitch, bearing 
@@ -96,6 +99,7 @@ Mapping terms
 - Geocoding
 - Gazetteer
 - Temporal or spatiotemporal
+- Buffer
 
 Common tools / libraries
 - Mapboxgl.js
@@ -104,7 +108,10 @@ Common tools / libraries
 - D3.js
 - Turf.js
 
-## How a typical web map works
+
+## Web Developers
+
+### How a typical web map works
 
 1. Include div where map will be placed in HTML document
 2. Initialize basemap. Create instance of map class - examples from Leaflet, Mapbox, etc. (Explain this uses raster tiles. <- does it also use vector tiles?). Include intial view parameters including where, zoom level etc. (Behind the scenes.)
@@ -113,6 +120,23 @@ Common tools / libraries
 
 ⚠️ Asset management. Like any webpage, managing data fetched asynchronously can be tricky - especially true as map data can often be quite large. Using async await or promises helps this massively. 
 
-## A basic web map
+### A basic web map
 
 Code example loading raster basemap, placing vector features on top. 
+
+### Frameworks
+
+React
+
+Angular
+
+### Working with maps on mobile
+
+## Data Scientists
+
+- Python (geopandas, shapely, matplotlib, seaborn, folium, ipyleaflet)
+- R (ggplot, sf, etc)
+- Reading data
+- Haversine distance! (clustering, feature engineering)
+- Spatial toolkits (sklearn)
+- Styling
