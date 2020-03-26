@@ -1,21 +1,26 @@
-# OS MasterMap Topo
+# All about OS MasterMap Topo
 
-All about OS MasterMap Topo (including Sites and Building Height Attribute)
+Ordnance Survey is responsible for keeping accurate, up-to-date maps of Great Britain for use by the private, public and third sectors. 
 
-## Intro 
+Topography is "the arrangement of the natural and artificial physical features of an area" ([Oxford](https://www.lexico.com/en/definition/topography)) - and OS maps Britain's topography. Every day a team of surveyors, pilots and analysts explore the country to discover changes to the physical topography, take measurements and record these changes in a database. 
 
-Ordnance Survey is responsible for keeping accurate, up-to-date maps of Great Britain. Every day a team of surveyors, pilots and analysts explore the country to discover changes to the physical topography, and record these changes in a database. After much processing, tagging and organizing, OS makes this available to the public as the most detailed, current and comprehensive map dataset of Great Britain: Ordnance Survey's MasterMap Topography Layer.
+![photo!](photo of surveying plane!)
+
+After much processing, tagging and organizing, OS makes this available as the most detailed, current and comprehensive map dataset of Great Britain: Ordnance Survey's MasterMap Topography Layer.
 
 ## What is OS MasterMap Topo?
 
-The OS MasterMap Topo product was created in x, designed to serve x and y users. The problem was xx - OS MasterMap Topo solved this by x. 
-- How it is created.
-Every day OS has x surveyors and y planes captured high resolution data of the Great Britain's topography. This data is x y z collection, analysis, warehousing, delivery. ![photo!](photo!)
-- How data has been and is being used
-OS MasterMap Topo data has been used by x to y (interesting story - emergency services? Environmental? Law enforcement? Utilities?) 
-- Now: opening geospatial data
-    - Why? 
-    - The opportunity - public and non-profits for free. And, for the first time, private sector users can access high resolution spatial data of GB for free, up to a significant threshold of usage. The goal is to enable innovation in spatial data visualization and analytics.
+The OS MasterMap Topography layer was created to provide businesses, governments and other organizations a detailed understanding of Britain. The dataset - which has been one of OS's premium products - is used by customers ranging from energy and utility companies to logistics firms, insurers, emergency service providers, government offices and so on.  
+
+The dataset includes vector features - points, lines and polygons - with high accuracy and rich attribution. This includes information about geographic features like roads, buildings, natural spaces, [*** What other features? ] - plus cartographic elements like intentionally-placed labels. 
+
+## Opening up OS MasterMap Topo
+
+
+
+[*** Why is OS opening this up? @Charley], Ordnance Survey is opening geospatial data - including OS MasterMap Topo - in new ways. Data that was previously only available for purchase will now be accessible through our OS Data Hub. Additionally, OS is launching a suite of APIs that enable users to access the data they need, when they need it - without the overhead of maintaining geospatial databases in-house. 
+
+Now public and non-profits can access OS MasterMap Topo for free. And, for the first time, private sector users can access high resolution spatial data of GB for free, up to a significant threshold of usage. The goal is to enable innovation in spatial data visualization and analytics.
 
 ## Let's look at the data
 
@@ -27,34 +32,34 @@ OS MasterMap Topo data has been used by x to y (interesting story - emergency se
 
 Maps represent the real world. A real-world object - a geographic entity that can be captured and represented in the data (from the [https://www.ordnancesurvey.co.uk/documents/os-mastermap-topography-layer-product-guide.pdf](Product Guide)) - is represented by a "feature" in OS MasterMap data. 
 
-You can think of a feature as a record in a database. (Diagram) Each feature has a number of characteristics or details - called "attributes". One of these attributes describes the geometry of the feature. Depending on the feature type, the real-world object will be represented as a point, line or polygon. 
+Each feature is a record in a database. Each of these records has information about the feature's position and shape on Earth - its geometry - as well as details about it - called "attributes". Attributes add meaning to the geometry - describing a polygon as a building, road segment or piece of land, for example. 
 
-As an example, in OS MasterMap Topo x features represent y. Here is what they look like .... ***
+The OS MasterMap Topography layer contains detailed features representing buildings, heritage & antiquities locations, roads, railways, water and much more. The OS MasterMap Sites layer includes  information about education, medical care, rail transport, road transport, water transport, utility, and industrial locations.
 
- Real-world features are described mathematically by using numbers to specify where they exist in space - on the Earth's surface. Points are represented by [x, y] - or [longitude, latitude] - coordinates. Lines are an ordered series of points, and polygons are series of points where the last one closes the shape, back where it started.
+So - what is in the OS MasterMap Topography layer?
+- Administrative boundaries like parliamentary constituencies and wards
+- Buildings
+- Heritage and antiquities sites
+- Land and landforms like parks, golf courses, slopes, cliffs, gardens and woodlands
+- Railways
+- Roads, tracks and paths
+- Structures like fountains, pylons, weirs and glass houses
+- Triangulation stations and other point height features
+- Ponds, lakes, tidal gauges and other water features
 
-// What resolution is OSMMT? What does that mean? 
+For a more detailed specification of the OS MasterMap Topography layer, read the [product guide](https://www.ordnancesurvey.co.uk/documents/os-mastermap-topography-layer-product-guide.pdf).
 
-#### Other Attributes
+#### Identifying Features
 
-Each feature is tagged with several attributes - contextual information like xxxx. These attributes are useful for analysts, visualizers and cartographers, etc ...
-
-#### The TOID
-
-Unique ID
+The OS MasterMap Topo dataset is comprised of x individual vector features, each assigned a unique Topographic Identifier, or TOID. This identifier is connected to that feature throughout it's lifespan and retired when the feature is removed (***retired?) - for example, if a building is demolished. This persistent identifier is useful because it allows analysts, developers and data scientists cross-reference topographic features across datasets and over time. [*** Does HMLR use TOIDs? Other agencies that have adopted them? ] More on TOIDs can be found [here](https://www.ordnancesurvey.co.uk/business-government/tools-support/mastermap-topography-support/toids).
 
 #### Building Height Attribute
 
-Beta dimension.
+Knowing the height of a building can be useful in many contexts, including analysis and visualisation. So, as a beta dataset, Ordnance Survey also offers building height attributes. This information is provided in a separate file with buildings referenced by TOID, enabling the two datasets to be easily joined. 
 
-### Themes
+#### OS MasterMap Sites layer
 
-In OS MasterMap Topography Layer, features are grouped into themes, such as buildings, land and water and so on, to enable more flexible data selection by customers.
-
-
-
-
-
+Ordnance Survey data underpins many functions of services critical for British society to function. OS recognized the need for users to have information about key geographic sites, so we created OS MasterMap Sites. This layer provides details of important sites like access points. With this information emergency services can be more efficiently routed to the scene of an accident, mapping companies can provide more accurate directions and planners can have a better understanding of how a change in the road network might affect traffic. This data is accessible through OS Data Hub. [ *** Can OS MM Sites be accessed through Data Hub? @CHARLEY??? ].
 
 ## Questions
 
@@ -68,4 +73,4 @@ Do we use OS MasterMap Topo in OS Vector Tiles API?
 
 ## Call to Action: 
 
-Check out the new APIs, available via the DataHub.
+Check out the new APIs, available via the OS Data Hub.
