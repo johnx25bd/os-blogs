@@ -4,7 +4,7 @@ Ordnance Survey is responsible for keeping accurate, up-to-date maps of Great Br
 
 Topography is "the arrangement of the natural and artificial physical features of an area" ([Oxford](https://www.lexico.com/en/definition/topography)) - and OS maps Britain's topography. Every day a team of surveyors, pilots and analysts explore the country to discover changes to the physical topography, take measurements and record these changes in a database. 
 
-![photo!](photo of surveying plane!)
+![OS Surveyor Aircraft](https://www.ordnancesurvey.co.uk/blog/wp-content/uploads/2012/02/2007-07-19-G_NOSE_03.jpg)
 
 After much processing, tagging and organizing, OS makes this available as the most detailed, current and comprehensive map dataset of Great Britain: Ordnance Survey's MasterMap Topography Layer.
 
@@ -34,6 +34,8 @@ With OS MasterMap Topo, each feature is a record in a database. Each of these re
 
 The OS MasterMap Topography layer contains detailed features representing buildings, heritage & antiquities locations, roads, railways, water and much more. The OS MasterMap Sites layer includes  information about education, medical care, rail transport, road transport, water transport, utility, and industrial locations.
 
+![OS MasterMap Topo](https://ordnancesurvey.co.uk/image-library/products/osmm-topo-lambeth.xa1b02a96.jpg?w=1000&q=100)
+
 OS MasterMap Topography layer includes:
 - Administrative boundaries like parliamentary constituencies and wards
 - Buildings
@@ -54,6 +56,8 @@ The OS MasterMap Topo dataset is comprised of 500 million individual features, e
 #### Building Height Attribute
 
 Knowing the height of a building can be useful in many contexts, including analysis and visualisation. So, as a beta dataset, Ordnance Survey also offers building height attributes. This information is provided in a separate file with buildings referenced by TOID, enabling the two datasets to be easily joined. 
+
+![OS Building Height Attribute](https://ordnancesurvey.co.uk/image-library/banners/osmm-topo-and-build-heights-place1.xaa2e6841.jpg?w=1000&q=100)
 
 #### OS MasterMap Sites layer
 
