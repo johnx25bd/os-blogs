@@ -18,7 +18,7 @@ OS MasterMap Topo includes vector features - points, lines and polygons - with h
 
 ## Opening up OS MasterMap Topo
 
-[*** Why is OS opening this up? @Charley], Ordnance Survey is opening geospatial data, including OS MasterMap Topo, in new ways. Data that was previously only available for purchase will now be accessible through our OS Data Hub. Additionally, OS is launching a suite of APIs that enable users to access the data they need, when they need it, without the overhead of maintaining geospatial databases in-house. 
+Supporting a mandate "[to unlock the government’s mapping and location data to boost the economy by £130m a year](https://www.ordnancesurvey.co.uk/business-government/tools-support/open-mastermap-programme)", Ordnance Survey is opening geospatial data, including OS MasterMap Topo, in new ways. Data that was previously only available for purchase will now be accessible through our OS Data Hub. Additionally, OS is launching a suite of APIs that enable users to access the data they need, when they need it, without the overhead of maintaining geospatial databases in-house. 
 
 Now public and non-profits can access OS MasterMap Topo for free. And, for the first time, private sector users can access high resolution spatial data of GB for free, up to a significant threshold of usage. The goal is to enable innovation in spatial data visualization and analytics.
 
@@ -49,7 +49,7 @@ For a more detailed specification of the OS MasterMap Topography layer, read the
 
 #### Identifying Features
 
-The OS MasterMap Topo dataset is comprised of [ - How many features is OS MasterMap Topo @Charley? ] individual vector features, each assigned a unique Topographic Identifier, or TOID. This identifier is connected to that feature throughout it's lifespan and retired when the feature is removed ( [***retired?*** ]) - if, for example, a building is demolished. This persistent identifier is useful because it allows analysts, developers and data scientists cross-reference topographic features across datasets and over time. [*** Does HMLR use TOIDs? Other agencies that have adopted them? ] More on TOIDs can be found [here](https://www.ordnancesurvey.co.uk/business-government/tools-support/mastermap-topography-support/toids).
+The OS MasterMap Topo dataset is comprised of 500 million individual features, each assigned a unique Topographic Identifier, or TOID. This identifier is connected to that feature throughout it's lifespan and retired when the feature is removed - if, for example, a building is demolished. This persistent identifier is useful because it allows analysts, developers and data scientists cross-reference topographic features across datasets and over time. More on TOIDs can be found [here](https://www.ordnancesurvey.co.uk/business-government/tools-support/mastermap-topography-support/toids).
 
 #### Building Height Attribute
 
@@ -57,8 +57,11 @@ Knowing the height of a building can be useful in many contexts, including analy
 
 #### OS MasterMap Sites layer
 
-Ordnance Survey data underpins many functions of services critical for British society to function. OS recognized the need for users to have information about key geographic sites, so we created OS MasterMap Sites. This layer provides details of important sites like access points. With this information emergency services can be more efficiently routed to the scene of an accident, mapping companies can provide more accurate directions and planners can have a better understanding of how a change in the road network might affect traffic. This data is accessible through OS Data Hub. [ *** Can OS MM Sites be accessed through Data Hub? @CHARLEY??? ].
+Ordnance Survey data underpins many functions of services critical for British society to function. OS recognized the need for users to have information about key geographic sites, so we created OS MasterMap Sites. This layer provides details of important sites like access points. With this information emergency services can be more efficiently routed to the scene of an accident, mapping companies can provide more accurate directions and planners can have a better understanding of how a change in the road network might affect traffic. This data is accessible through OS Features API, on the Data Hub.
 
---
+## Accessing OS MasterMap Topo
 
-Through the Data Hub, Ornance Survey is making it easier than ever to access the MasterMap Topography layer, Building Height Attribution, and OS MasterMap Sites layer. Our aim is to help users derive benefit from this rich trove of location data about Great Britain. You can learn more on the OS Data Hub [here](https://osdatahub.os.uk/).
+Through the Data Hub, Ornance Survey is making it easier than ever to access the MasterMap Topography layer, Building Height Attribution, and OS MasterMap Sites layer. OS Maps API provides a pre-rendered map on which you can overlay your own data to give it detailed location context. OS Features API allows users to access the features they need, when they need it - including rich attributes. And OS Vector Tiles API lets users access customisable, scalable, detailed backdrop map data in a lightweight format.
+
+
+Our aim is to help users derive benefit from this rich trove of location data about Great Britain. You can learn more on the OS Data Hub [here](https://osdatahub.os.uk/).
