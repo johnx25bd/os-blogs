@@ -73,6 +73,8 @@ Spatial datasets require specialized databases to efficiently store and access. 
 
 [**OpenLayers**](https://github.com/johnx25bd/os-blogs/blob/master/drafts/useful-tools-for-web-mapping). OpenLayers is another library for creating dynamic, interactive maps in the browser. The library handles both raster and vector tiles and can visualize spatial data from various formats, like GeoJSON, KML, GML and others.
 
+[**ArcGIS API for JavaScript**](https://developers.arcgis.com/javascript/). With Esri's ArcGIS API for JavaScript developers can build location experiences in 2D and 3D, using dynamic styling based on data. 
+
 [**d3.js**](https://d3js.org/). Data-Driven Documents (D3) is an incredibly powerful library for working with data in the browser. The library excels as a way to create interactive geographic maps and visualizations - supported by a large community and range of example code snippets.
 
 [**Proj4js**](http://proj4js.org/). A very useful JavaScript library for transforming coordinates between coordinate systems, including datum transformations.
@@ -105,4 +107,4 @@ Spatial datasets require specialized databases to efficiently store and access. 
 
 --
 
-Know of any more great tools for web mappers? Tweet at us [@OrdnanceSurvey](https://twitter.com/ordnancesurvey)!
+Know of any more great tools for web mappers? Tweet at us [@OrdnanceSurvey](https://twitter.com/ordnancesurvey) or tag [#OSDeveloper](https://twitter.com/hashtag/osdeveloper)!
