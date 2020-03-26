@@ -12,35 +12,13 @@ As a note - here we'll present resources roughly in line with the path spatial d
 
 Data comes from somewhere, and spatial data is no different. Exactly _how_ spatial data is captured and created is beyond the scope of this post - all we need to know is that **raster images** and **vector features** can be downloaded or fetched from several reliable, authoritative sources. 
 
-### Data Sources
 
-#### Raster Images
+[OS Maps API](https://osdatahub.os.uk/docs/wmts/overview). The Maps API serves detailed and scalable raster backdrop maps in four colour palettes - 'Roads', 'Outdoor', 'Light' and 'Leisure'. The service is offered in Web Map Tile Service (WMTS) and ZXY protocols, and can be connected to maps built with Leaflet, Mapbox GL JS, OpenLayers, and other libraries.
 
-Georeferenced raster images can form a basemap on the web or be used for analysis (like image recognition). 
+[OS Features API](). Our Features API lets users request detailed vector features along with rich attribution metadata in various formats. Data can be requested using HTTP requests via curl, JavaScript APIs (like fetch, d3.json, axios), Python tools like urllib.request and requests, etc.
 
-[!image of raster]
+[OS Vector Tile API](https://osdatahub.os.uk/docs/vts/overview). We serve vector tiles via our Vector Tile API, offering scalable, customisable and lightweight mapping data for users to visualise with various mapping libraries.
 
-Good, reliable sources of raster spatial data include:
-
-**OS Data Hub**. Here at Ordnance Survey our team of surveyors, cartographers, data scientists and computer scientists collaborate to create raster map tiles of Great Britain at various zoom levels, in four styles. With the OS Maps API developers can load these tiles as a basemap.
-
-**USGS Earth Explorer**. The US Geological Survey makes raster datasets of many different extents and resolutions available online. Lots of great satellite imagery here, including time series.
-
-
-#### Vector Features
-
-[ should I include licensing / attribution info? ]
-
-
-
-**OS Data Hub**. Ordnance Survey also provides vector features with attribution via the OS Features API, and lightweight vector tiles through the OS Vector Tiles API. The spatial extent covers Great Britain, and includes data from the premium OS MasterMap Topo layer.
-
-**Natural Earth**. Available at 1:10m, 1:50m and 1:110m scales, Natural Earth provides global vector datasets in SHP, SQLite and GeoPackage formats, and files ready for use with ArcMap (.mxd) and QGIS (.qgs).
-
-**OpenStreetMap**. Citizen mappers around the world have created an amazing dataset of spatial features for OpenStreetMap, available for download or via API access. [ <- is this tru? [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) ]
-
-
-[ ! image of vector features ]
 
 ## Data Prep
 
@@ -54,11 +32,9 @@ Often spatial (vector) data is downloaded from sources as shapefiles - but very 
 
 **QGIS**. QGIS is an open source desktop GIS (geographic information system) program. With Q, users can load, visualize, manipulate and export vector and raster data - including into geojson and other formats.
 
-**gdal**. The Geospatial Data Abstraction Library really deserves to stand on its own - it is an incredibly powerful tool to work with both raster and vector data. Many geospatial tools are built on top of gdal (including QGIS). With the library developers can manipulate spatial data in a very sophisticated way - but it is quite a technical tool to use. 
+**GDAL**. The Geospatial Data Abstraction Library really deserves to stand on its own - it is an incredibly powerful tool to work with both raster and vector data. Many geospatial tools are built on top of gdal (including QGIS). With the library developers can manipulate spatial data in a very sophisticated way - but it is quite a technical tool to use. 
 
 **[toGeoJSON](https://github.com/mapbox/togeojson)**. A quick JS library to convert KML and GPX to GeoJSON on the command line, in with Node.js or in the browser. From Mapbox.
-
-[**leaflet-omnivore**](https://github.com/mapbox/leaflet-omnivore). omnivore is a Javascript library that converts CSV, GPX, KML, WKT TopoJSON and encoded polylines to GeoJSON. This library works natively with Leaflet and can be adapted to work with other mapping libraries (like mapboxgl.js). From Mapbox. 
 
 **[TopoJSON](https://github.com/topojson)**. Vector datasets can be quite large - making websites slower and the web developer's life more difficult. TopoJSON helps by reducing the size of GeoJSON files by efficiently describing line segments (arcs) so the same lines don't appear twice in the dataset. Note - to use TopoJSON you'll need to also use the [topojson client](https://github.com/topojson/topojson-client/blob/master/README.md#topo2geo), to convert back to GeoJSON.
 
@@ -92,11 +68,15 @@ Spatial datasets require specialized databases to efficiently store and access. 
 
 [Leaflet](https://leafletjs.com/). Leaflet is "a JavaScript library for interactive maps". The library handles raster and vector tiles, and enables web developers to customize styling and interactivity - on desktop and mobile devices. A standard for web mappers.
 
-[mapboxgl.js](https://docs.mapbox.com/mapbox-gl-js/api/). Mapbox GL JS lets web developers build customizable, interactive vector maps, rendered using WebGL. This gives developers the option the customize styling and offers a  smooth, impressive user experience, including 3D effects. GL JS fits into the Mapbox ecosystem. 
+[Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/). Mapbox GL JS lets web developers build customizable, interactive vector maps, rendered using WebGL. This gives developers the option the customize styling and offers a  smooth, impressive user experience, including 3D effects. GL JS fits into the Mapbox ecosystem. 
+
+[OpenLayers](). OpenLayers is another library for creating dynamic, interactive maps in the browser. The library handles both raster and vector tiles and can visualize spatial data from various formats, like GeoJSON, KML, GML and others.
 
 [d3.js](https://d3js.org/). Data-Driven Documents (D3) is an incredibly powerful library for working with data in the browser. The library excels as a way to create interactive geographic maps and visualizations - supported by a large community and range of example code snippets. 
 
 [Turf.js](https://turfjs.org/). Geospatial analysis in JavaScript. Turf provides a suite of functions to analyze vector geopspatial features and work with coordinates and coordinate arrays. 
+
+[Proj4js](http://proj4js.org/). A very useful JavaScript library for transforming coordinates between coordinate systems, including datum transformations.
 
 ## Data Analysis
 
@@ -106,19 +86,22 @@ Spatial datasets require specialized databases to efficiently store and access. 
 
 [Observable](https://observablehq.com). Observable is a web-based notebook for exploring and visualizing data. Powerful - well worth a look. 
 
-
 ## Design / Cartography
 
-### Color Pickers
+### Colour Pickers
 
-[Colorbrewer](https://colorbrewer2.org/). Created by a cartographer who has extensively researched how to use color on maps, Colorbrewer provides various color palettes for map designers. 
+[Colorbrewer](https://colorbrewer2.org/). Created by a cartographer who has extensively researched how to use colour on maps, Colorbrewer provides various colour palettes for map designers. 
 
-[Adobe Color](https://color.adobe.com/create). A tool to generate color palettes, including various schemes and hex code outputs. 
+[Adobe Color](https://color.adobe.com/create). A tool to generate colour palettes, including various schemes and hex code outputs. 
 
-[OS Color Palette](https://github.com/OrdnanceSurvey/GeoDataViz-Toolkit/tree/master/Colours). Ordnance Survey cartographers have created a color scheme to be used on OS maps, made available in the OS GeoDataViz toolkit on Github.
+[OS Colour Palette](https://github.com/OrdnanceSurvey/GeoDataViz-Toolkit/tree/master/Colours). Ordnance Survey cartographers have created a colour scheme to be used on OS maps, made available in the OS GeoDataViz toolkit on Github.
 
 ### Iconography
 
-[Mapbox Maki](https://labs.mapbox.com/maki-icons/). From Mapbox, Maki is a set of vector icons specifically for map designers - beautiful, with lots of icons you don't find elsewher.e.
+[Mapbox Maki](https://labs.mapbox.com/maki-icons/). From Mapbox, Maki is a set of vector icons specifically for map designers - beautiful, with lots of icons you don't find elsewhere.
 
 [Font Awesome](https://fontawesome.com/). Another vector icon pack - with a free option. 
+
+--
+
+Got any more great tools for web mappers? Tweet at us @OrdnanceSurvey!
