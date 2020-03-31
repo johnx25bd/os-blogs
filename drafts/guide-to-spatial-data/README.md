@@ -1,6 +1,6 @@
-# A Web Developer's Guide to Working With Spatial Data
+# A Programmer's Guide to Working With Spatial Data
 
-_Crash course for web devs on how to work with maps and mapping data._
+_Crash course for web devs and data scientists on how to work with maps and mapping data._
 
 ## Intro 
 
@@ -8,9 +8,9 @@ What is a map? Representing reality on an abstracted image.
 
 What is spatial data?
 - "data that describes anything with spatial extent (i.e. size, shape or position)" [w3c/](https://www.w3.org/TR/sdw-bp/)
-- "AKA location information"
+- "AKA location information or mapping data"
 
-Coordinates - xyz, plus time. Extra dimensions (attributes).
+Representing location on a plane using coordinates - xyz, plus time. Extra dimensions (attributes).
 
 Viewing the map in a browser. Center or bounding box, zoom, pitch, bearing. Visible layers. etc.
 
@@ -22,6 +22,7 @@ _Spheres and planes_: why is spatial special?
     - Remote sensing
     - Surveyors
     - ??
+![Gif of D3 projections transitions]()
 
 _Servers and clients_: why is web special?
 - Mobile browsers deliver the web to users wherever they go
@@ -29,18 +30,17 @@ _Servers and clients_: why is web special?
 Focus: get you up and running. I will approach this using a specific set of technologies - each step has many ways to solve the same problem. I'll indicate those where possible. (Which technologies should I use?)
 
 ⚠️ = snags and pitfalls
-👍 = rule of thumb
+👍 = rule of thumb or helpful tip
+🔑 = key term
 
 ## Key concepts
 
-Terms defined
-
-Coordinates
+### Coordinates
 - coordinate formats: decimal degrees, deg min sec, radians, etc.
 - Locating points on the surface of a sphere.
 - Is this getting too in depth? Could be its own post. Don't want to lose people here.
 
-Coordinate Reference Systems
+#### Coordinate Reference Systems
 - Geographic Reference Systems
 - What it is and why it matters
 - CRSs vs Projections
@@ -50,10 +50,18 @@ Coordinate Reference Systems
 
 ![image](./assets/image-of-coordinate-system.png). <- Do we have OS graphics we want to use? 
 
-Raster
-- Tiles
+#### Projections
+
+### Representing Spatial Data
+
+### Raster 
+- Grids of regular pixels, each pixel assigned numerical values.
+    - Values could be RGB, elevation, multispectral satellite imagery etc.
+- Pixels are positioned in space. 
 - Formats: tif, png, jpg, cogs (cloud-optimized geotiff)
 - Placing tiles
+    - Libraries
+    - ![Image or zooming gif of map with png borders]()
 - Fetching tiles as we zoom
 - ZXY ("Zoom X Y"!), WMTS 
 - Popular tile servers - Ordnance Survey, OSM, Bing, Mapbox, Stamen
@@ -63,37 +71,44 @@ Raster
 - Rendered vector maps
 - Heatmaps and other raster maps
 - Opacity
+- Alternative types of rasters - like hex, triangle grids etc.
+- Uses - images, indices, etc. 
 
 SVG, canvas, divs.
 
-Vector
+### Vector
+- Define "Feature".
 - Points, Lines, Polygons
-    - Define Feature.
     - Representing geometries: arrays of coordinate pairs.
     - Talk about Multi* / FeatureCollections (image) (types)
     - Complex polygons
 - "Layer": collection of similar features  (?? multi-type layers?)
 - Formats: geojson, shp, kml, gml, geopackage, vector tiles, WKT, sf (code examples - at least of geojson)
-    - An aside: topojson.
+    - An aside: topojson and encoding topologies.
+- Accuracy
+    - 👍 `geojson-precision` to reduce file size
 - Labels.
 - geometries and attributes
-- Features vs Vector Tiles
+- Vector Tiles
 - SVG
-- Pop-ups
+- Canvas
+- Pop-ups and tooltips
 - Advantages and disadvantages (inspiration [here](https://en.wikipedia.org/wiki/GIS_file_formats#Advantages_and_disadvantages))
 
 Data sources
+- OS Data Hub
 - Tile server
 - PostGIS
 - Geoserver
 - CartoDB
 - ArcGIS MapServer
+- Mapbox
 - ??
 
 Styling 
 
 Mapping terms
-- Map state: refers to the state of hte map visualization including zoom level, center or bounding box, pitch, bearing 
+- Map state: refers to the state of the map visualization including zoom level, center or bounding box, pitch, bearing 
 - Zoom to or fly to
 - Pop-up
 - Geocoding
@@ -118,7 +133,7 @@ Common tools / libraries
 3. Fetch and add custom layers.
 4. Attach event listeners and do custom styling. 
 
-⚠️ Asset management. Like any webpage, managing data fetched asynchronously can be tricky - especially true as map data can often be quite large. Using async await or promises helps this massively. 
+⚠️ Asset management. Like any webpage, managing data fetched asynchronously can be tricky - especially true as map data can often be quite large. Using async / await or promises helps this massively. 
 
 ### A basic web map
 
@@ -137,6 +152,6 @@ Angular
 - Python (geopandas, shapely, matplotlib, seaborn, folium, ipyleaflet)
 - R (ggplot, sf, etc)
 - Reading data
-- Haversine distance! (clustering, feature engineering)
+- 👍 Haversine distance! (clustering, feature engineering)
 - Spatial toolkits (sklearn)
 - Styling
