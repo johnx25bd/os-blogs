@@ -151,7 +151,17 @@ Angular
 
 - Python (geopandas, shapely, matplotlib, seaborn, folium, ipyleaflet)
 - R (ggplot, sf, etc)
+    - [leaflet for R](https://rstudio.github.io/leaflet/)
 - Reading data
 - 👍 Haversine distance! (clustering, feature engineering)
 - Spatial toolkits (sklearn)
 - Styling
+
+
+## Resources
+
+[Spatial Data Science](https://keen-swartz-3146c4.netlify.com/) in R. (Edzer Pebesma and Roger Bivand 2020)
+
+
+
+
