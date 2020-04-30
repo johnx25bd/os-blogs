@@ -50,6 +50,6 @@ Vector tile maps are well supported, and can be developed with common mapping li
 
 One last advantage: vector features are often served with some attribution. This means that features include some metadata, which are properties that describe or identify the feature. Many vector tile services include minimal attribution data to make sure maps load quickly, but with even minimal attribution map developers can apply styles and interactivity to vector features that are not possible with raster maps.
 
-## Vectors for the win
+## Vector Tiles from Ordnance Survey
 
 With all these advantages, vector tile maps are a must-know for any modern web map developer. With Ordnance Survey's [Vector Tiles API](https://osdatahub.os.uk/docs/vts/overview), available on the [OS Data Hub](https://osdatahub.os.uk/), developers can create these fast and versatile maps of Great Britain. All that is needed is an API key!
