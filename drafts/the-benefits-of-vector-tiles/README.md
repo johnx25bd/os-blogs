@@ -14,7 +14,9 @@ When a web map is loaded, it is set to a zoom level and extent, which defines th
 
 ## Raster and Vector
 
-Location data comes in two broad forms. **Raster** data represents space as grids of regular pixels. By assigning each pixel in the grid a value — or a few values — images can be described with numbers. This is useful because it means images can be represented, processed and stored by computers as **bits**, or **bi**nary dig**its**. 
+Location data comes in two broad forms. 
+
+**Raster** data represents space as grids of regular pixels. By assigning each pixel in the grid a value — or a few values — images can be described with numbers. This is useful because it means images can be represented, processed and stored by computers as **bits**, or **bi**nary dig**its**. 
 
 A raster tile service (like the OS Maps API) serves binary data representing these raster (png) images to a mapping client, where they are processed and displayed on the screen for the user. 
 
