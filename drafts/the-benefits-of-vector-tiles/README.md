@@ -10,7 +10,7 @@ The typical modern map user accesses map data on devices that typically don't ha
 
 When a web map is loaded, it is set to a zoom level and extent, which defines the level of detail and the area that will be visible in the viewport. A map server sends grid sections of the map, called "tiles", to the client, where they are arranged in the right configuration to appear as a map. As the user pans and zoom in and out, requests for the correct tiles are sent, and the response is used to update the screen.
 
-(image of tiles)
+![Raster tiles loading dynamically](./media/raster-tiles.gif)
 
 ## Raster and Vector
 
@@ -40,11 +40,15 @@ Vector tiles offer a number of advantages over raster map tiles for web mappers.
 
 First: they can be customised extensively by the user. Styles can be customised, and even adapted based on user interaction - to highlight a particular layer or feature, for example. Because they are rendered in the client, custom styles can be defined and applied when the map is created. Designers can adapt the style of their maps so the match organisational colour schemes. (Check out [Maputnik](https://maputnik.github.io/) for a great tool to create vector tile styles.)
 
+![Custom-styled vector tiles from OS](./media/custom-vector-tile-style.png)
+
 Second: maps made with vector tiles are fast. A vector tile service will send much less data than a raster service would send for the same map - meaning lower bandwidth use, and lower disk space requirements. Features are represented in a very lightweight manner, and styles are only defined once, then applied to a layer no matter how many features. This makes vector tile maps great for mobile and low-bandwidth uses.
 
 Additionally, vector tile maps have a much smoother zooming effect than raster services. Because raster data is represented as pixels, maps can get grainy as a user zooms in, until a higher-resolution tile is received from the server. Vector tiles instead maintain a smooth zooming and scaling effect.
 
 Another major advantage of vector tiles (which include labels as vector features): rotation, tilting and other 3D effects are possible. Buildings can be extruded to create 3D cities and camera pitch can be adjusted to give the effect of looking across land, rather than only straight down on it. 
+
+![3D visualisation with vector tiles](./media/3d-vector-tiles.png)
 
 Vector tile maps are well supported, and can be developed with common mapping libraries including [Leaflet.js](https://leafletjs.com/), [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/), [OpenLayers](https://openlayers.org/) and the [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/). 
 
@@ -52,4 +56,6 @@ One last advantage: vector features are often served with some attribution. This
 
 ## Vector Tiles from Ordnance Survey
 
-With all these advantages, vector tile maps are a must-know for any modern web map developer. With Ordnance Survey's [Vector Tiles API](https://osdatahub.os.uk/docs/vts/overview), available on the [OS Data Hub](https://osdatahub.os.uk/), developers can create these fast and versatile maps of Great Britain. All that is needed is an API key!
+With all these advantages, vector tile maps are a must-know for any modern web map developer. Based on user feedback, in early 2019 OS [launched](https://www.ordnancesurvey.co.uk/blog/2019/01/os-open-zoomstack-released-today/) a Vector Tile Service based on our Open Zoomstack dataset. This year we're launching a new and improved [Vector Tile API](https://osdatahub.os.uk/docs/vts/overview), which includes our flagship premium MasterMap Topography data.
+
+Access the Vector Tile API via the [OS Data Hub](https://osdatahub.os.uk/) and start creating these fast and versatile maps of Great Britain. All that is needed is an API key!
