@@ -1,10 +1,47 @@
-# A Programmer's Guide to Working With Spatial Data
+# A Programmer's (Practical?) Guide to Working With Spatial Data
 
-_Crash course for web devs and data scientists on how to work with maps and mapping data._
+_A crash course for web developers and data scientists on how to work with maps and mapping data._
 
 ## Intro 
 
-What is a map? Representing reality on an abstracted image. 
+Maps are incredibly useful things. We use maps to understand reality, to decide on where to navigate, make sense of our sense of place - without maps, we are, quite often, lost. Maps are tools we have come to rely on to survive and thrive. 
+
+What is a map? [Wikipedia puts it concisely](https://en.wikipedia.org/wiki/Map): "A map is a _symbolic depiction_ emphasizing _relationships_ between _elements_ of some _space_." This definition captures the breadth of things we describe as "maps": from the traditional - paper LandRanger maps hikers use to explore the Scottish Highlands - to the more conceptual - a mind map of ideas around a topic, or a site map of pages of a website, or a network of firms competing in a market. In every case, maps can help us understand a space in a more complete way than we can by simply observing it directly. 
+
+![Image of some map or maps. Embed? Gif?]()
+
+
+This guide will focus on physical space, and symbolic depictions of physical space on the scale most familiar to humans: geographic maps. Our goal is to provide competent programmers and analytical thinkers a strong enough grounding in the _theory_ of spatial data to build and develop sophisticated _applied_ uses of spatial data. 
+
+This is a practical guide. We are writing for an audience of web developers and data scientists - but the guide is intended to explain technical concepts in clear terms and be useful for non-technical audiences. Most of the chapters will not deal with code, though we do include a chapter with [a workflow and tools for web developers](#) familiar with JavaScript, and one with [tools for data scientists](#) working in Python. We also link to external resources whenever possible, to give readers the ability to dig deeper into any of the topics covered.
+
+## Housekeeping
+
+This guide is designed to be a reference on the concepts unique to working with spatial data. It is meant to be useful to read from start to finish, but also for readers referring to relevant sections as needed. We use a few symbols to indicate points to take note of:
+
+| |  |
+| --- | --- |
+| 👍 | A rule of thumb or helpful tip |
+| 🔑 | A key term or concept |
+| ⚠️ | Common snags and pitfalls |
+
+We're hosting the guide as a living document on Github - so feel free to ask questions, suggest improvements and raise issues if you see something that could be better! 
+
+## Topics
+
+- What is spatial data?
+- Coordinates in three dimensions
+- Relative vs absolute positions
+- Spheres and planes: why is spatial special? 
+
+## What is spatial data? 
+
+Spatial data is a subset of data, where the relative positions of the features represented are described in the data. 
+
+It may refer to physical space - the space occupied by a building, mountain range, cell or galaxy - but also could refer to an abstract, intangible space, like a 
+
+
+Representing reality on an abstracted image. 
 
 What is spatial data?
 - "data that describes anything with spatial extent (i.e. size, shape or position)" [w3c/](https://www.w3.org/TR/sdw-bp/)
@@ -29,9 +66,7 @@ _Servers and clients_: why is web special?
 
 Focus: get you up and running. I will approach this using a specific set of technologies - each step has many ways to solve the same problem. I'll indicate those where possible. (Which technologies should I use?)
 
-⚠️ = snags and pitfalls
-👍 = rule of thumb or helpful tip
-🔑 = key term
+
 
 ## Key concepts
 
