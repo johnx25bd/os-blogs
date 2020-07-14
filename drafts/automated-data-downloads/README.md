@@ -1,12 +1,12 @@
 # Automated Data Downloads
 
-Data can be incredibly useful. Data contains information - meaning - about some subject. By analysing or interpreting the data, this meaning can be understood and inform decision-making.
+Data can be incredibly useful - by analysing or interpreting the information contained in data, better decisions can be made.
 
  Ordnance Survey is one of the world's oldest data organisations. OS has gathered information about Great Britain since 1791, organising, analysing and disseminating maps and other information. As information technologies have evolved from tables and charts and pen-and-paper calculations to databases, vector graphics and sophisticated machine learning algorithms, OS has been a leader in adopting and innovating new ways to capture, store, process and share valuable location information. 
 
  ## The Challenge
 
- As the scale of data grows, so do it's potential usefulness and the complexity of managing it. Understanding a small table of numbers is easy - less so for a complex database with dozens of tables and millions of rows. With code, though, it has never been easier for programmers to retrieve and manipulate large volumes of data - and extract the valuable information they contain. 
+ As the scale of data grows, so does it's potential usefulness - and the complexity of managing it. Understanding a small table of numbers is easy - less so for a complex database with dozens of tables and millions of rows. With code, though, it has never been easier for programmers to retrieve and manipulate large volumes of data - and extract and understand the valuable information they contain. 
 
 As every data scientist and web developer knows, well-structured datasets are difficult to find, and even harder to create. Data wrangling is a major task, and often overlooked by those less familiar with the data science process. For algorithms to extract accurate and meaningful information from a dataset - especially using a powerful analysis libraries openly available like Python's pandas - the data needs to be consistently structured and clean. 
 
@@ -37,6 +37,6 @@ The OS Downloads API makes a number of OS OpenData datasets available for automa
 
 ## Unlocking value by improving access 
 
-The OS Data Hub APIs are the result of a major effort at Ordnance Survey to make our National Geographic Database easier to access than ever before. A broad range of users in Great Britain - from civil servants to NGO workers, academic researchers, entrepreneurs and large companies - could enhance the quality and efficiency of their work with the insights they could derive from OS data. We're working hard to make sure the path to data-driven decisionmaking is as short as possible. Automated data downloads are one of the ways we're doing that. 
+The OS Data Hub APIs are the result of a major effort at Ordnance Survey to make our National Geographic Database easier to access than ever before. A broad range of users in Great Britain - from civil servants to NGO workers, academic researchers, entrepreneurs and large companies - could enhance the quality and efficiency of their work with the insights they could derive from OS data. We're working hard to make sure the path from data to decisionmaking is as short as possible. Automated data downloads are one of the ways we're doing that. 
 
-If you use OS data and want to learn if the OS Data Hub APIs could help, or think that having access to a high resolution dataset with over 500 million features in Britain might be useful - sign up for the OS Data Hub, or reach out on Twitter to [@OrdnanceSurvey](https://twitter.com/ordnancesurvey)r. 
+If you use OS data and want to learn if the OS Data Hub APIs could help, or think that having access to a high resolution dataset with over 500 million features in Britain might be useful - sign up for the OS Data Hub, or reach out on Twitter to [@OrdnanceSurvey](https://twitter.com/ordnancesurvey). 

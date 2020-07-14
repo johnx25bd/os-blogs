@@ -302,3 +302,5 @@ Angular
 [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf). Wickham 2014.
 
 [MacWright on Lon/Lat](https://macwright.org/lonlat/)
+
+[Web Programming for Cartographers](https://medium.com/@ralucagnicola/web-programming-for-cartographers-beyond-the-basics-cecac632551a)
