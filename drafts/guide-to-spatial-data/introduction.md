@@ -102,6 +102,61 @@ So, if we look back at the table we saw earlier - but as a spatial dataset:
 
 By including the geographic coordinates in the dataset, it becomes spatial data. With this additional dimension, much deeper insights about the records in a dataset - and their relationships - can often be drawn. In fact, often the spatial dimension is the key to understanding relationships and answering questions an analyst might want to understand.
 
+### Raster and Vector
+
+Spatial data typically falls into two categories: raster and vector. Both are ways to describe space and represent features, but they work quite differently.
+
+#### Raster Data
+
+A raster is a “grid of regularly sized pixels”. By assigning each cell in the grid a value — or a few values — images can be described numerically, as multidimensional arrays.
+
+For example, take a 3x3 grid that looked like this:
+
+![A raster grid](./assets/raster.png)
+
+_A 3x3 raster grid._
+
+If 1 means black and 0 means white, we could represent it numerically like this:
+
+```
+img = [[ 1, 0, 1 ],
+       [ 0, 1, 0 ], 
+       [ 1, 0, 1 ]]
+```
+
+The numbers in raster cells can mean lots of things — the altitude of the land or depth of the sea at that specific point, the amount of ice or snow on that point, the number of people living within that pixel, and so on. Further, just about any color in the visible spectrum can be described by a combination of three numbers representing the intensity of Red, Green and Blue (RGB) — satellite images are raster data structures. GeoTiff, jpg, png and bitmap files contain raster data.
+
+[ image ]
+
+_A raster image of population in Africa, from http://www.ncgia.ucsb.edu/pubs/gdp/pop.html._
+
+### Vector Data
+
+Vector data is a bit more abstract. In a vector dataset, features are individual units in the dataset, and each feature typically represents a point, line or polygon. These features are represented mathematically, usually by numbers that signify either the coordinates of the point, or the vertices (corners) of the geometry.
+
+Image for post
+
+_Vector features from Saylor Academy._
+
+#### Points, Lines, Polygons
+As a quick example, here’s a bare-bones numerical representation of each of these types of features:
+
+```
+point =   [ 45.841616, 6.212074 ]
+
+line =    [[ -0.131838, 51.52241 ],
+           [ -3.142085, 51.50190 ],
+           [ -3.175046, 55.96150 ]]
+
+polygon = [[ -43.06640, 17.47643 ],
+           [ -46.40625, 10.83330 ],
+           [ -37.26562, 11.52308 ],
+           [ -43.06640, 17.47643 ]]
+           // ^^ The first and last coordinate are the same
+```
+
+Vector features will often have some metadata included that describes the feature — the name of a road, say, or the population of a state. These extra, non-spatial metadata of a feature are usually called “attributes”, and are often represented in an “attribute table”. Very often spatial data scientists will combine the spatial dimensions (coordinates — for points, or coordinate arrays — for lines and polygons) with non-spatial dimensions in their analysis. GeoJSON and .shp files commonly contain vector data.
+
 ### Why is spatial special?
 
 In the spatial data community you'll often hear the phrase "spatial is special". Why is this? 
