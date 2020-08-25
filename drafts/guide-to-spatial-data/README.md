@@ -304,3 +304,5 @@ Angular
 [MacWright on Lon/Lat](https://macwright.org/lonlat/)
 
 [Web Programming for Cartographers](https://medium.com/@ralucagnicola/web-programming-for-cartographers-beyond-the-basics-cecac632551a)
+
+[GIS Free Online Book by Victor Olaya](https://volaya.github.io/gis-book/en/index.html)
