@@ -1,5 +1,5 @@
 
-## Introduction
+## Chapter 1: Introduction
 
 Maps are incredibly useful things. We use maps to understand reality, to decide on where to navigate, make sense of where we are - without maps, we are, quite often, lost. Maps are tools we have come to rely on to survive and thrive. 
 
@@ -169,4 +169,4 @@ Because of this 'spatial autocorrelation', special statistical techniques are re
 > 
 >  [Modifiable unit areal problem (MAUP)](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem#:~:text=The%20modifiable%20areal%20unit%20problem%20(MAUP)%20is%20a%20source%20of,population%20density%20or%20illness%20rates.)<br />
 >  
-> 
+> MORE HERE!!
