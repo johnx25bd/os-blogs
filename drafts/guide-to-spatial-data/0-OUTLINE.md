@@ -21,51 +21,53 @@ Introducing data
 ## 2: Thinking Geo
 
 Where am I? 
-- Latitude
-- Longitude
-- Representing coordinates
-    - Precision
-- Bearing
-- 3D -> 2D: projections
+    - Latitude
+    - [Longitude](./2-THINKING-GEO.md#longitude)
+    - Representing coordinates
+        - Precision
+    - Bearing
+    - 3D -> 2D: projections
 
-Fast forward: 
-- GNSS. TopoNet?
-- Coordinate reference systems
-    - SRS, CRS, projection, datum, etc.
+    Fast forward: 
+    - GNSS. TopoNet?
+    - Coordinate reference systems
+        - SRS, CRS, projection, datum, etc.
 
-Raster
-- Definition
-    - What is an "observation"?
-- Georeferencing
-- Examples
-    - DEM
-    - Hillshade
-    - Satellite
-    - Rendered cartography
-    - Heatmaps
-- Alternative grids
-    - Hex (hexbin, uber)
-    - Triangle 
-- Uses
-    - Overlay: intensity
-    - Satellite imagery
-    - etc
+Representing Spatial Data
+    Raster
+    - Definition
+        - What is an "observation"?
+    - Georeferencing
+    - Tiles
+    - Examples
+        - DEM
+        - Hillshade
+        - Satellite
+        - Rendered cartography
+        - Heatmaps
+    - Alternative grids
+        - Hex (hexbin, uber)
+        - Triangle 
+    - Uses
+        - Overlay: intensity
+        - Satellite imagery
+        - etc
 
-Vector
-- Definition
-    - What is an "observation"?
-- "Features"
-    - Feature types
-        - Points
-        - Lines
-        - Polygons
-        - Multi*
-        - FeatureCollections
-    - Attribution / properties
-    - Topological relationships
-- "Layers"
-    - A thematic (?) grouping of features
-    - Example
+    Vector
+    - Definition
+        - What is an "observation"?
+    - "Features"
+        - Feature types
+            - Points
+            - Lines
+            - Polygons
+            - Multi*
+            - FeatureCollections
+        - Attribution / properties
+        - Topological relationships
+    - "Layers"
+        - A thematic (?) grouping of features
+        - Example
 
 
 ## 3: The Spatial Data Lifecycle
@@ -113,7 +115,7 @@ Visualisation
 - 1D, 2D, 3D, 4D, n-D?
 - VR and AR
 
-## Spatial Data for Web Developers
+## 4. Spatial Data for Web Developers
 
 How a web map works
 - HTML
@@ -130,7 +132,7 @@ How a web map works
     - Frameworks
     - etc
 
-## Spatial Data for Data Scientists
+## 5. Spatial Data for Data Scientists
 
 A typical spatial data science workflow
 - Access data

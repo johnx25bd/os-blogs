@@ -70,7 +70,7 @@ print(decimal_degrees)
 # 51.0007222222
 ```
 
-Less frequently, you might find degrees measured in radians, which are angular units - [ concise definition of a radian ] - 1rad == 360 / 2pi == 57.2974693618 .
+Less frequently, you might find degrees measured in radians, which are angular units - [ concise definition of a radian ] - `1rad == 360 / 2pi == 57.2974693618`.
 
 Converting from radians to decimal degrees - in JavaScript this time:
 
@@ -89,7 +89,22 @@ console.log(decimalDegrees);
 | Radians | x |
 | ?? | ?? |
 
+
+
+### Bearing
+
+_content here_
+- Haversine distance
+- Great circle route
+- Triangulation
+
 ### 3D -> 2D: making maps
+
+Working out that the Earth was (roughly) a sphere, and how to locate things on the surface of that sphere, was a huge achievement for humanity, and resulted in huge advancements in the safety of navigation and seafaring, and in the accuracy with which we could map our world. 
+
+But we haven't addressed a very significant challenge: (projections)
+
+[ gif - unwrapping a sphere ]
 
 - Projections
 - Working with projections
@@ -102,9 +117,11 @@ https://www.youtube.com/watch?v=KUF_Ckv8HbE
 
 ## Fast forward to the 20th century
 
-How GNSS systems work.
+### GNSS
+- How GNSS systems work.
+- TopoNet?
 
-- Coordinate Reference Systems
+### Coordinate Reference Systems
 
 ### More complexity: coordinate reference systems
 
@@ -119,7 +136,6 @@ For someone walking around, these variations in the Earth's shape and local grav
 - CRSs vs Projections
 - 👍 - use Web Mercator. Or BNG? (I'd like this to be applicable to a global audience).
 - Read more: [OS blog](https://www.ordnancesurvey.co.uk/blog/2016/09/ostn15-new-geoid-britain/), [more technical](https://www.ordnancesurvey.co.uk/documents/resources/guide-coordinate-systems-great-britain.pdf).
-- ⚠️: [lon, lat] vs [lat, lon].  
 
 https://www.ordnancesurvey.co.uk/documents/resources/guide-coordinate-systems-great-britain.pdf
 
@@ -127,66 +143,38 @@ https://www.ordnancesurvey.co.uk/documents/resources/guide-coordinate-systems-gr
 
 #### Projections
 
-### Representing Spatial Data
+#### Datum? SRS? What else?
+
+## Representing Spatial Data
 
 ### Raster 
-- Grids of regular pixels, each pixel assigned numerical values.
+- Definition Grids of regular pixels, each pixel assigned numerical values.
     - Values could be RGB, elevation, multispectral satellite imagery etc.
-- Pixels are positioned in space. 
-- Formats: tif, png, jpg, cogs (cloud-optimized geotiff)
-- Placing tiles
-    - Libraries
+    - What is an "observation"?
+- Pixels are positioned in space - "georeferenced". 
+- Mention formats: tif, png, jpg, cogs (cloud-optimized geotiff)
+- Tiles as a concept
     - ![Image or zooming gif of map with png borders]()
-- Fetching tiles as we zoom
-- ZXY ("Zoom X Y"!), WMTS 
-- Popular tile servers - Ordnance Survey, OSM, Bing, Mapbox, Stamen
-- Advantages and disadvantages  (inspiration [here](https://en.wikipedia.org/wiki/GIS_file_formats#Advantages_and_disadvantages))
-- Digital elevation model and hillshade
-- Satellite
-- Rendered vector maps
-- Heatmaps and other raster maps
-- Opacity
+    - Fetching tiles as we zoom
+- Examples
+    - Digital elevation model 
+    - Hillshade
+    - Satellite
+    - Rendered vector maps
+    - Heatmaps and other raster maps
+    - Opacity
 - Alternative types of rasters - like hex, triangle grids etc.
 - Uses - images, indices, etc. 
 
-SVG, canvas, divs.
-
 ### Vector
-- Define "Feature".
-- Points, Lines, Polygons
-    - Representing geometries: arrays of coordinate pairs.
-    - Talk about Multi* / FeatureCollections (image) (types)
-    - Complex polygons
+- Definition
+    - What is an "observation" or "record"?
+- "Feature".
+    - Points, Lines, Polygons
+        - Representing geometries: arrays of coordinate pairs.
+        - Talk about Multi* / FeatureCollections (image) (types)
+        - Complex polygons
+    - Attribution / properties
+    - Topology
 - "Layer": collection of similar features  (?? multi-type layers?)
-- Formats: geojson, shp, kml, gml, geopackage, vector tiles, WKT, sf (code examples - at least of geojson)
-    - An aside: topojson and encoding topologies.
-- Accuracy
-    - 👍 `geojson-precision` to reduce file size
-- Labels.
-- geometries and attributes
-- Vector Tiles
-- SVG
-- Canvas
-- Pop-ups and tooltips
-- Advantages and disadvantages (inspiration [here](https://en.wikipedia.org/wiki/GIS_file_formats#Advantages_and_disadvantages))
-
-Data sources
-- OS Data Hub
-- Tile server
-- PostGIS
-- Geoserver
-- CartoDB
-- ArcGIS MapServer
-- Mapbox
-- ??
-
-Styling 
-
-Mapping terms
-- Map state: refers to the state of the map visualization including zoom level, center or bounding box, pitch, bearing 
-- Zoom to or fly to
-- Pop-up
-- Geocoding
-- Gazetteer
-- Temporal or spatiotemporal
-- Buffer
+- An aside: topojson and encoding topologies.
