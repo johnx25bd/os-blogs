@@ -1,4 +1,4 @@
-# Thinking Geo
+# Chapter 2: Thinking Geo
 
 _Part 2 of A Programmer's Guide to Spatial Data_
 
@@ -39,19 +39,48 @@ Reliably keeping time on a moving ship is a tricky thing, explaining the long, i
 
 With longitude and latitude - the `x` and `y` coordinates - we can describe any point on the Earth's surface. 
 
-> ⚠️: Note how this differs from the linguistic convention - usually we refer to "latitude and longitude" when speaking. This is a constant bugbear for developers. There is no universally-agreed standard for ordering coordinates, so different programming tools / systems represent coordinates inconsistently - some as `[x,y]`, some as `[y,x]`. If your coordinates aren't showing up, or are in the wrong part of the world - first thing is to check the coordinate ordering! More on this [here](https://macwright.com/lonlat/), including which formats, JS APIs and services use which order, from Tom MacWright. 
+> ⚠️: Note how this differs from the linguistic convention - usually we refer to "latitude and longitude" when speaking, which breaks from the mathematical convention of ordering coordinates horizontal (x), then vertical (y). This is a constant bugbear for developers. There is no universally-agreed standard for ordering coordinates, so different programming tools / systems represent coordinates inconsistently - some as `[x,y]`, some as `[y,x]`. If your coordinates aren't showing up, or are in the wrong part of the world - first thing is to check the coordinate ordering! More on this [here](https://macwright.com/lonlat/), including which formats, JS APIs and services use which order, from Tom MacWright. 
 
 ### Representing coordinates
 
-Right - we've established that we can describe any position on the surface of a sphere as a pair of coordinates that represent the angle a line transecting that position from the origin, which is a radius drawn to the intersection of the equator and the Prime Meridian. If you want more detail, see the [geographic coordinate systems article on Wikipedia](https://en.wikipedia.org/wiki/Geographic_coordinate_system).
+We've established that we can describe any position on the surface of a sphere as a pair of coordinates that represent the horizontal and vertical angles of a line transecting that position from the origin, which is a radius drawn to the intersection of the equator and the Prime Meridian. If you want more detail, see the [geographic coordinate systems article on Wikipedia](https://en.wikipedia.org/wiki/Geographic_coordinate_system).
+
+[ ^^ needs to be more clearly and concisely stated ]
 
 As with any unit of measurement, there are several ways to represent coordinates. Historically, latitudes and longitudes were represented in **degrees, minutes, seconds**. 
 
 ⚠️: Here, "minute" does not refer to a unit of time, but rather to a fraction of a degree. Referring to the angle measurements, 1° is divided into 60 minutes, represented as 60', and each minute is divided into 60 seconds, shown as 60". Coordinates are represented as `deg° min" sec' N||S, deg° min" sec' E||W` - Big Ben is located at 51°30'02.6"N 0°07'28.6"W.
 
-This deg-min-sec format can be easy to understand in some contexts - but is not particularly easy for computers to work with. 
+This deg-min-sec format can be easy to understand in some contexts - but is not particularly easy for computers to work with. Instead, in most computing contexts coordinates are represented in decimal degrees - two float values. 
 
+We can convert between the two formats - degrees minutes seconds and decimal degrees, based on the relationships we described above. In Python:
 
+```python
+degrees = 51
+minutes = 30
+seconds = 2.6
+hemisphere = "N"
+
+decimal_degrees = degrees + (minutes / 60) + (seconds / 3600)
+
+if hemisphere == "S":
+    decimal_degrees *= -1
+
+print(decimal_degrees)
+# 51.0007222222
+```
+
+Less frequently, you might find degrees measured in radians, which are angular units - [ concise definition of a radian ] - 1rad == 360 / 2pi == 57.2974693618 .
+
+Converting from radians to decimal degrees - in JavaScript this time:
+
+```javascript
+var radians = 1.570797;
+var decimalDegrees = radians * (360 / (Math.PI * 2));
+
+console.log(decimalDegrees);
+// 90.00003857181117
+```
 
 | Type | Example | 
 | --- | --- |
@@ -60,10 +89,20 @@ This deg-min-sec format can be easy to understand in some contexts - but is not 
 | Radians | x |
 | ?? | ?? |
 
+### 3D -> 2D: making maps
+
+- Projections
+- Working with projections
+- Example function `f([lon, lat]) => [x, y]`
+
+embed D3 projections example? 
+
+https://www.youtube.com/watch?v=KUF_Ckv8HbE
+
+
 ## Fast forward to the 20th century
 
 How GNSS systems work.
-
 
 - Coordinate Reference Systems
 
@@ -73,25 +112,6 @@ Earlier we talked about how the Earth is not a perfect sphere - it is actually a
 
 For someone walking around, these variations in the Earth's shape and local gravity don't make a significant impact. But if we are trying to create a system for accurately measuring points on the Earth's surface, they do. 
 
-## 3D -> 2D: making maps
-
-- Projections
-- Working with projections
-
-
-
-
-embed D3 projections example? 
-
-
-https://www.youtube.com/watch?v=KUF_Ckv8HbE
-
-
-
-### Coordinates
-- coordinate formats: decimal degrees, deg min sec, radians, etc.
-- Locating points on the surface of a sphere.
-- Is this getting too in depth? Could be its own post. Don't want to lose people here.
 
 #### Coordinate Reference Systems
 - Geographic Reference Systems
