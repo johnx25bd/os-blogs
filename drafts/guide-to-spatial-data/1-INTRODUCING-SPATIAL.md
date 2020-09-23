@@ -1,6 +1,27 @@
 
 ## Chapter 1: Introduction
 
+
+
+What is a map? 
+
+The purpose and goals of this guide.
+
+Introducing data
+- What is data?
+- Structured vs unstructured data
+- Tidy data
+- Data types (?)
+- Enter spatial: what is spatial data? 
+- Raster and vector
+    - Raster data
+    - Vector data
+        - Points, Lines, Polygons
+- Why is spatial special?
+
+
+---
+
 Maps are incredibly useful things. We use maps to understand reality, to decide on where to navigate, make sense of where we are - without maps, we are, quite often, lost. Maps are tools we have come to rely on to survive and thrive. 
 
 What is a map? [Wikipedia puts it concisely:](https://en.wikipedia.org/wiki/Map) "A map is a _symbolic depiction_ emphasizing _relationships_ between _elements_ of some _space_." This definition captures the breadth of things we describe as "maps": from the traditional - paper [LandRanger maps](https://www.ordnancesurvey.co.uk/shop/maps.html) hikers use to explore the Scottish Highlands - to the more conceptual - a mind map of ideas around a topic, or a site map of pages of a website, or a map representing a network of firms competing in a market. In every case, accurate maps can help us understand a space in a more complete way than we can by simply observing it directly. Mapmakers do this by designing abstract representations of the space and the features within it.
