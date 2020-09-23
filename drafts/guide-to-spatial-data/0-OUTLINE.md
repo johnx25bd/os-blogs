@@ -1,6 +1,6 @@
 # A Programmer's Guide to Spatial Data: OUTLINE
 
-## 1: Introduction
+## 1: Introduction: thinking geo
 
 What is a map? 
 
@@ -18,56 +18,58 @@ Introducing data
         - Points, Lines, Polygons
 - Why is spatial special?
 
+GIS
+
 ## 2: Thinking Geo
 
 Where am I? 
-    - Latitude
-    - [Longitude](./2-THINKING-GEO.md#longitude)
-    - Representing coordinates
-        - Precision
-    - Bearing
-    - 3D -> 2D: projections
+- Latitude
+- [Longitude](./2-THINKING-GEO.md#longitude)
+- Representing coordinates
+    - Precision
+- Bearing
+- 3D -> 2D: projections
 
-    Fast forward: 
-    - GNSS. TopoNet?
-    - Coordinate reference systems
-        - SRS, CRS, projection, datum, etc.
+Fast forward: 
+- GNSS. TopoNet?
+- Coordinate reference systems
+    - SRS, CRS, projection, datum, etc.
 
 Representing Spatial Data
-    Raster
-    - Definition
-        - What is an "observation"?
-    - Georeferencing
-    - Tiles
-    - Examples
-        - DEM
-        - Hillshade
-        - Satellite
-        - Rendered cartography
-        - Heatmaps
-    - Alternative grids
-        - Hex (hexbin, uber)
-        - Triangle 
-    - Uses
-        - Overlay: intensity
-        - Satellite imagery
-        - etc
+Raster
+- Definition
+    - What is an "observation"?
+- Georeferencing
+- Tiles
+- Examples
+    - DEM
+    - Hillshade
+    - Satellite
+    - Rendered cartography
+    - Heatmaps
+- Alternative grids
+    - Hex (hexbin, uber)
+    - Triangle 
+- Uses
+    - Overlay: intensity
+    - Satellite imagery
+    - etc
 
-    Vector
-    - Definition
-        - What is an "observation"?
-    - "Features"
-        - Feature types
-            - Points
-            - Lines
-            - Polygons
-            - Multi*
-            - FeatureCollections
-        - Attribution / properties
-        - Topological relationships
-    - "Layers"
-        - A thematic (?) grouping of features
-        - Example
+Vector
+- Definition
+    - What is an "observation"?
+- "Features"
+    - Feature types
+        - Points
+        - Lines
+        - Polygons
+        - Multi*
+        - FeatureCollections
+    - Attribution / properties
+    - Topological relationships
+- "Layers"
+    - A thematic (?) grouping of features
+    - Example
 
 
 ## 3: The Spatial Data Lifecycle
@@ -152,7 +154,17 @@ A typical spatial data science workflow
     - Refer to resources
 
 
+## 6. What's next in the geospatial world? 
 
+Geovation
+
+Project Iceberg (NUAR)
+
+Mapping the pandemic
+
+Remote sensing
+
+## 7. Appendix
 
 Spatial Data in practice (tables? appendix?)
 - Raster

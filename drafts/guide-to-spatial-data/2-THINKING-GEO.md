@@ -70,7 +70,7 @@ print(decimal_degrees)
 # 51.0007222222
 ```
 
-Less frequently, you might find degrees measured in radians, which are angular units - [ concise definition of a radian ] - `1rad == 360 / 2pi == 57.2974693618`.
+Much less frequently, you might find degrees measured in radians, which are angular units - [ concise definition of a radian ] - `1rad == 360 / 2pi == 57.2974693618`.
 
 Converting from radians to decimal degrees - in JavaScript this time:
 
@@ -85,9 +85,7 @@ console.log(decimalDegrees);
 | Type | Example | 
 | --- | --- |
 | Decimal degrees | `[1.2314, 44.1243]` |
-| Degrees, minutes, seconds | 1° xxx | 
-| Radians | x |
-| ?? | ?? |
+| Degrees, minutes, seconds | 44° 7' 27.48"N, 1° 13' 53.04" W | 
 
 
 
@@ -165,6 +163,7 @@ https://www.ordnancesurvey.co.uk/documents/resources/guide-coordinate-systems-gr
     - Opacity
 - Alternative types of rasters - like hex, triangle grids etc.
 - Uses - images, indices, etc. 
+- Challenges: data size. Compute to data
 
 ### Vector
 - Definition
@@ -175,6 +174,6 @@ https://www.ordnancesurvey.co.uk/documents/resources/guide-coordinate-systems-gr
         - Talk about Multi* / FeatureCollections (image) (types)
         - Complex polygons
     - Attribution / properties
-    - Topology
+    - Topology (contains, within, etc.)
 - "Layer": collection of similar features  (?? multi-type layers?)
 - An aside: topojson and encoding topologies.

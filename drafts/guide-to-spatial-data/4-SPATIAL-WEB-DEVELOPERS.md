@@ -1,7 +1,8 @@
 # 4: Spatial for Web Developers
 
 
-How a web map works
+How a web map works: emphasising VISUALISATION.
+
 - HTML
 - CSS
 - JavaScript
@@ -10,8 +11,9 @@ How a web map works
     - Overlays
         - Raster layers
         - Vector features
+- Back end / front end etc.
 - Useful tools
     - JS libraries
-    - Utitilies
+    - Utilities
     - Frameworks
     - etc

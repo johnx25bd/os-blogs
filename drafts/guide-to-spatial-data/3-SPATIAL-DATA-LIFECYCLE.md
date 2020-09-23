@@ -4,6 +4,7 @@
 Capture / Creation
 - Raster: Remote sensing
     - Optical, SAR, etc
+    - LIDAR
     - Airborne sensors
     - UAVs
     - ??
@@ -37,6 +38,7 @@ Visualisation
     - Iconography
     - Legend
     - Compass rose, extent etc
+    - Visual hierarchy
 - Static visualisations
 - Interactive visualisations
 - UX

@@ -1,7 +1,8 @@
 # 5: Spatial for Data Scientists
 
 
-A typical spatial data science workflow
+A typical spatial data science workflow: emphasising ANALYSIS.
+
 - Access data
     - CSV
     - JSON

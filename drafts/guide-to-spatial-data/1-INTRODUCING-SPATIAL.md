@@ -21,6 +21,8 @@ Our focus here is on digital data, or, more specifically, binary data: data wher
 
 [ am I losing the plot here ? 😂 ]
 
+https://www.safe.com/what-is/spatial-data/
+
 ### Structure in data
 
 Data can be "structured" or "unstructured" - that is, organised in a standardised way, or not. The Data Management Association specifies that unstructured data "has not been tagged or otherwise structured into rows and columns or records." ([Geospatial Commission 2020](https://www.gov.uk/government/publications/geospatial-glossary/geospatial-glossary)) This is relevant when we try to automate the processing of data - computers work very well with structured data, and have a harder time processing unstructured data.
