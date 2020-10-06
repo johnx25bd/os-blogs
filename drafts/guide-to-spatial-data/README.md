@@ -17,10 +17,10 @@ Our hope is to make the complex world of spatial data a bit more comprehensible,
 
 [1 Introducing Spatial](./1-INTRODUCING-SPATIAL.md) (80%)
 
-[2 Thinking Geo](./2-THINKING-GEO.md) (40%)
+[2 Thinking Geo](./2-THINKING-GEO.md) (70%)
 
-[3 The Spatial Data Lifecycle](./3-SPATIAL-DATA-LIFECYCLE.md) (0%)
+[3 The Spatial Data Lifecycle](./3-SPATIAL-DATA-LIFECYCLE.md) (60%)
 
-[4 Spatial for Web Developers](./4-SPATIAL-WEB-DEVELOPERS.md) (0%)
+[4 Spatial for Web Developers](./4-SPATIAL-WEB-DEVELOPERS.md) (50%)
 
-[5 Spatial for Data Scientists](./5-SPATIAL-DATA-SCIENTISTS.md) (0%)
+[5 Spatial for Data Scientists](./5-SPATIAL-DATA-SCIENTISTS.md) (50%)

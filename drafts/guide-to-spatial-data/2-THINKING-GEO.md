@@ -257,4 +257,5 @@ https://www.ordnancesurvey.co.uk/documents/resources/guide-coordinate-systems-gr
     - Attribution / properties
     - Topology (contains, within, etc.)
 - "Layer": collection of similar features  (?? multi-type layers?)
+- Bounding boxes
 - An aside: topojson and encoding topologies.
